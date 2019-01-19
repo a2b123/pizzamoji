@@ -13,6 +13,7 @@
 		878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DE21F3C42500D05174 /* Assets.xcassets */; };
 		878CC7E221F3C42500D05174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7E021F3C42500D05174 /* LaunchScreen.storyboard */; };
 		878CC7E521F3C42500D05174 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7E421F3C42500D05174 /* main.m */; };
+		878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7EC21F3C48000D05174 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		878CC7E121F3C42500D05174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		878CC7E321F3C42500D05174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		878CC7E421F3C42500D05174 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		878CC7EB21F3C48000D05174 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		878CC7EC21F3C48000D05174 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				878CC7D521F3C42300D05174 /* AppDelegate.h */,
 				878CC7D621F3C42300D05174 /* AppDelegate.m */,
+				878CC7EB21F3C48000D05174 /* RootViewController.h */,
+				878CC7EC21F3C48000D05174 /* RootViewController.m */,
 				878CC7D821F3C42300D05174 /* ViewController.h */,
 				878CC7D921F3C42300D05174 /* ViewController.m */,
 				878CC7DB21F3C42300D05174 /* Main.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				878CC7DA21F3C42300D05174 /* ViewController.m in Sources */,
 				878CC7E521F3C42500D05174 /* main.m in Sources */,
+				878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */,
 				878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
