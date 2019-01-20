@@ -77,7 +77,7 @@
 
     
     UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
-    CGRect pizzaFrame = CGRectMake(0, 0, 70, 35);
+    CGRect pizzaFrame = CGRectMake(0, 0, 55, 35);
     UIButton *pizzaButton = [[UIButton alloc] initWithFrame:pizzaFrame];
     [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
     [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
@@ -95,7 +95,7 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
     
-//    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:32] };
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:28] };
     
 }
 
