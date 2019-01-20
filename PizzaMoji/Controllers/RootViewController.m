@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "EmojiCollectionViewCell.h"
 #import "EmojiViewController.h"
+#import "SettingsViewController.h"
 
 
 @interface RootViewController ()
@@ -16,6 +17,7 @@
     CGFloat cellHeight;
     NSMutableArray *emojis;
     UIImage *selectedEmoji;
+    SettingsViewController *settingsVC;
 
 }
 
@@ -90,12 +92,12 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    self.navigationController.navigationBar.topItem.title = @"PizzaEmoji";
+    self.navigationController.navigationBar.topItem.title = @"PizzaMoji";
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:28] };
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:18] };
     
 }
 
