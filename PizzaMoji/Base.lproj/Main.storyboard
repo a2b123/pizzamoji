@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9sr-st-45b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9sr-st-45b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,25 +13,80 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sNa-sJ-8Oe"/>
+                        <viewControllerLayoutGuide type="bottom" id="LEN-Cz-CtR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-AF-UaT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ffu-es-Zyl">
+                                    <size key="itemSize" width="220" height="203"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCellID" id="ffm-Jm-639" customClass="EmojiCollectionViewCell">
+                                        <rect key="frame" x="77.5" y="0.0" width="220" height="203"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="203"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AP7-KS-xrb">
+                                                    <rect key="frame" x="10" y="20" width="200" height="183"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="AP7-KS-xrb" secondAttribute="bottom" id="MDg-dX-SQt"/>
+                                            <constraint firstItem="AP7-KS-xrb" firstAttribute="top" secondItem="ffm-Jm-639" secondAttribute="top" constant="20" id="Mu0-Tv-l89"/>
+                                            <constraint firstItem="AP7-KS-xrb" firstAttribute="leading" secondItem="ffm-Jm-639" secondAttribute="leading" constant="10" id="Yeh-mI-oYI"/>
+                                            <constraint firstAttribute="trailing" secondItem="AP7-KS-xrb" secondAttribute="trailing" constant="10" id="xLN-Eh-Ogr"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="emojiImageView" destination="AP7-KS-xrb" id="5Cc-xg-y93"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="t1J-yw-dXn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lir-ch-YSW"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="R3A-AF-UaT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3EX-1Z-6UE"/>
+                            <constraint firstAttribute="trailing" secondItem="R3A-AF-UaT" secondAttribute="trailing" id="GcI-ki-pnZ"/>
+                            <constraint firstItem="R3A-AF-UaT" firstAttribute="top" secondItem="sNa-sJ-8Oe" secondAttribute="bottom" id="f2s-NU-azP"/>
+                            <constraint firstItem="LEN-Cz-CtR" firstAttribute="top" secondItem="R3A-AF-UaT" secondAttribute="bottom" id="iHU-Ox-74D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ld2-hR-A57"/>
                     <connections>
+                        <outlet property="emojiCollectionView" destination="R3A-AF-UaT" id="4UD-hF-Apd"/>
+                        <outlet property="layout" destination="ffu-es-Zyl" id="ZPk-o9-qyT"/>
                         <segue destination="rI9-dO-roK" kind="show" identifier="RootToEmojiSegue" id="phB-1P-KwR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="887" y="-564"/>
+            <point key="canvasLocation" x="885.60000000000002" y="-564.46776611694156"/>
         </scene>
         <!--Emoji View Controller-->
         <scene sceneID="dSS-Cr-Hjm">
             <objects>
                 <viewController id="rI9-dO-roK" customClass="EmojiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ctS-dN-uO2"/>
+                        <viewControllerLayoutGuide type="bottom" id="zK2-aW-IRw"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jdW-J7-NpL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,14 +120,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EfC-HH-D5Q" firstAttribute="centerX" secondItem="qWj-Y9-H2x" secondAttribute="centerX" id="Ey2-qo-CTy"/>
+                            <constraint firstItem="EfC-HH-D5Q" firstAttribute="centerX" secondItem="jdW-J7-NpL" secondAttribute="centerX" id="Ey2-qo-CTy"/>
                             <constraint firstItem="EfC-HH-D5Q" firstAttribute="top" secondItem="NVm-cI-WvL" secondAttribute="bottom" constant="25" id="HqF-c2-YPr"/>
-                            <constraint firstItem="NVm-cI-WvL" firstAttribute="centerX" secondItem="qWj-Y9-H2x" secondAttribute="centerX" id="Vsk-qe-wyQ"/>
-                            <constraint firstItem="bi6-ih-elU" firstAttribute="centerX" secondItem="qWj-Y9-H2x" secondAttribute="centerX" id="dBd-Sb-ua0"/>
-                            <constraint firstItem="NVm-cI-WvL" firstAttribute="top" secondItem="qWj-Y9-H2x" secondAttribute="top" constant="25" id="qTm-6i-2OK"/>
+                            <constraint firstItem="NVm-cI-WvL" firstAttribute="centerX" secondItem="jdW-J7-NpL" secondAttribute="centerX" id="Vsk-qe-wyQ"/>
+                            <constraint firstItem="bi6-ih-elU" firstAttribute="centerX" secondItem="jdW-J7-NpL" secondAttribute="centerX" id="dBd-Sb-ua0"/>
+                            <constraint firstItem="NVm-cI-WvL" firstAttribute="top" secondItem="ctS-dN-uO2" secondAttribute="bottom" constant="25" id="qTm-6i-2OK"/>
                             <constraint firstItem="bi6-ih-elU" firstAttribute="top" secondItem="EfC-HH-D5Q" secondAttribute="bottom" constant="50" id="wY2-H3-pu7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="qWj-Y9-H2x"/>
                     </view>
                     <connections>
                         <outlet property="emojiImageView" destination="NVm-cI-WvL" id="2Af-sW-4tA"/>

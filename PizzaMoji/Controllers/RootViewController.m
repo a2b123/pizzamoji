@@ -27,14 +27,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSURL *localDictionary = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0];
-    NSLog(@"APP ---> %@", localDictionary.absoluteString);
-    
+    NSURL *localDirectory = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask][0];
+    NSLog(@"APP ---> %@", localDirectory.absoluteString);
+
     cellHeight = 150;
-    layout.minimumLineSpacing = 0;
+    layout.minimumInteritemSpacing = 0;
     layout.minimumLineSpacing = 0;
     CGFloat cellWidth = [self calcCellWidth:self.view.frame.size];
     layout.itemSize = CGSizeMake(cellWidth, cellHeight);
+//    NSLog(@"layout.itemsize ---> %@", layout.itemSize);
+
     
     emojis = [[NSMutableArray alloc] initWithObjects:
               [UIImage imageNamed:@"cheese"],
@@ -84,7 +86,7 @@
     
     UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
     self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
-
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -103,12 +105,14 @@
     
     EmojiCollectionViewCell *emojiCell =  [collectionView dequeueReusableCellWithReuseIdentifier:@"EmojiCellID" forIndexPath:indexPath];
     emojiCell.emojiImageView.image = [emojis objectAtIndex:indexPath.row];
+//    NSLog(@"Emoji Cell ---> %@", emojiCell);
     return emojiCell;
-    
+
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
+//    NSLog(@"Emoji Count ---> %@", emojis);
+
     return emojis.count;
     
 }
@@ -134,9 +138,9 @@
 
 -(void)segueToPizzaPage {
     
-    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
-    [self.navigationController pushViewController:freePizzaVC animated:YES];
+//    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
+//    [self.navigationController pushViewController:freePizzaVC animated:YES];
 }
 
 

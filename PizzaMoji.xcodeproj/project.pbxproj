@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7D621F3C42300D05174 /* AppDelegate.m */; };
-		878CC7DA21F3C42300D05174 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7D921F3C42300D05174 /* ViewController.m */; };
 		878CC7DD21F3C42300D05174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DB21F3C42300D05174 /* Main.storyboard */; };
 		878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DE21F3C42500D05174 /* Assets.xcassets */; };
 		878CC7E221F3C42500D05174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7E021F3C42500D05174 /* LaunchScreen.storyboard */; };
@@ -16,7 +15,6 @@
 		878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7EC21F3C48000D05174 /* RootViewController.m */; };
 		8799703421F3DE81000833C9 /* EmojiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799703321F3DE81000833C9 /* EmojiViewController.m */; };
 		8799703921F3E556000833C9 /* EmojiCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799703821F3E556000833C9 /* EmojiCollectionViewCell.m */; };
-		8799704321F3FAC9000833C9 /* Soup of Justice License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8799704121F3FAC8000833C9 /* Soup of Justice License.txt */; };
 		8799704421F3FAC9000833C9 /* soupofjustice.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8799704221F3FAC8000833C9 /* soupofjustice.ttf */; };
 /* End PBXBuildFile section */
 
@@ -24,8 +22,6 @@
 		878CC7D221F3C42300D05174 /* PizzaMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878CC7D521F3C42300D05174 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		878CC7D621F3C42300D05174 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		878CC7D821F3C42300D05174 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		878CC7D921F3C42300D05174 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		878CC7DC21F3C42300D05174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		878CC7DE21F3C42500D05174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		878CC7E121F3C42500D05174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,7 +33,6 @@
 		8799703321F3DE81000833C9 /* EmojiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiViewController.m; sourceTree = "<group>"; };
 		8799703721F3E556000833C9 /* EmojiCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiCollectionViewCell.h; sourceTree = "<group>"; };
 		8799703821F3E556000833C9 /* EmojiCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiCollectionViewCell.m; sourceTree = "<group>"; };
-		8799704121F3FAC8000833C9 /* Soup of Justice License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Soup of Justice License.txt"; sourceTree = "<group>"; };
 		8799704221F3FAC8000833C9 /* soupofjustice.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = soupofjustice.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +83,6 @@
 				878CC7EC21F3C48000D05174 /* RootViewController.m */,
 				8799703221F3DE81000833C9 /* EmojiViewController.h */,
 				8799703321F3DE81000833C9 /* EmojiViewController.m */,
-				878CC7D821F3C42300D05174 /* ViewController.h */,
-				878CC7D921F3C42300D05174 /* ViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -106,22 +99,13 @@
 		8799703F21F3E74A000833C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8799704021F3FAC8000833C9 /* soup_of_justice */,
+				8799704221F3FAC8000833C9 /* soupofjustice.ttf */,
 				878CC7E321F3C42500D05174 /* Info.plist */,
 				878CC7E421F3C42500D05174 /* main.m */,
 				878CC7E021F3C42500D05174 /* LaunchScreen.storyboard */,
 				878CC7DE21F3C42500D05174 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8799704021F3FAC8000833C9 /* soup_of_justice */ = {
-			isa = PBXGroup;
-			children = (
-				8799704121F3FAC8000833C9 /* Soup of Justice License.txt */,
-				8799704221F3FAC8000833C9 /* soupofjustice.ttf */,
-			);
-			path = soup_of_justice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +169,6 @@
 				878CC7E221F3C42500D05174 /* LaunchScreen.storyboard in Resources */,
 				878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */,
 				878CC7DD21F3C42300D05174 /* Main.storyboard in Resources */,
-				8799704321F3FAC9000833C9 /* Soup of Justice License.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +179,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				878CC7DA21F3C42300D05174 /* ViewController.m in Sources */,
 				878CC7E521F3C42500D05174 /* main.m in Sources */,
 				878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */,
 				8799703921F3E556000833C9 /* EmojiCollectionViewCell.m in Sources */,

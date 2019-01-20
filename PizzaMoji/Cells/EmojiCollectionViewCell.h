@@ -11,8 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EmojiCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *emojiImageView;
 
-@property (strong, nonatomic) IBOutlet UIImageView *emojiImageView;
 
 @end
 

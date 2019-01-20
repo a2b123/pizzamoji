@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface RootViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
     
-    IBOutlet UICollectionView *emojiCollectionView;
-    IBOutlet UICollectionViewFlowLayout *layout;
+    __weak IBOutlet UICollectionView *emojiCollectionView;
+    __weak IBOutlet UICollectionViewFlowLayout *layout;
+    
     
 }
 
 @end
 
-NS_ASSUME_NONNULL_END
