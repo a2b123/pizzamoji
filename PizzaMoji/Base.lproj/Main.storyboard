@@ -280,11 +280,30 @@
                         <segue destination="zcJ-Z0-UWC" kind="show" identifier="SettingsToTutorialSegue" id="C4b-An-iDr"/>
                         <segue destination="bEP-RZ-2rF" kind="show" identifier="WinFreePizzaSegue" id="imK-cV-BgB"/>
                         <segue destination="jec-we-rwP" kind="show" identifier="PrivacyPolicySegue" id="UdN-zG-EPZ"/>
+                        <segue destination="qKW-fY-Skc" kind="show" identifier="ContactUsSegue" id="HrY-RS-xAe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prN-8a-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886" y="149"/>
+        </scene>
+        <!--Contact Us View Controller-->
+        <scene sceneID="Fu9-Si-PCS">
+            <objects>
+                <viewController id="qKW-fY-Skc" customClass="ContactUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B1h-MJ-Ch9"/>
+                        <viewControllerLayoutGuide type="bottom" id="11E-zx-cj8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PiL-HC-XP4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJi-Ze-cR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="956"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="Opn-N2-kgU">

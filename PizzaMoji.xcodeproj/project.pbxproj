@@ -20,6 +20,7 @@
 		8799704D21F449EC000833C9 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799704C21F449EC000833C9 /* TutorialViewController.m */; };
 		8799705021F4540B000833C9 /* WinFreePizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799704F21F4540B000833C9 /* WinFreePizzaViewController.m */; };
 		8799705321F458C5000833C9 /* PrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799705221F458C5000833C9 /* PrivacyPolicyViewController.m */; };
+		8799705621F45E59000833C9 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799705521F45E59000833C9 /* ContactUsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		8799704F21F4540B000833C9 /* WinFreePizzaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinFreePizzaViewController.m; sourceTree = "<group>"; };
 		8799705121F458C5000833C9 /* PrivacyPolicyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyPolicyViewController.h; sourceTree = "<group>"; };
 		8799705221F458C5000833C9 /* PrivacyPolicyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		8799705421F45E59000833C9 /* ContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactUsViewController.h; sourceTree = "<group>"; };
+		8799705521F45E59000833C9 /* ContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactUsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				8799704F21F4540B000833C9 /* WinFreePizzaViewController.m */,
 				8799705121F458C5000833C9 /* PrivacyPolicyViewController.h */,
 				8799705221F458C5000833C9 /* PrivacyPolicyViewController.m */,
+				8799705421F45E59000833C9 /* ContactUsViewController.h */,
+				8799705521F45E59000833C9 /* ContactUsViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */,
 				8799703921F3E556000833C9 /* EmojiCollectionViewCell.m in Sources */,
 				8799705021F4540B000833C9 /* WinFreePizzaViewController.m in Sources */,
+				8799705621F45E59000833C9 /* ContactUsViewController.m in Sources */,
 				8799704A21F42C29000833C9 /* SettingsViewController.m in Sources */,
 				8799705321F458C5000833C9 /* PrivacyPolicyViewController.m in Sources */,
 				878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */,
