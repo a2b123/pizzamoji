@@ -305,6 +305,50 @@
             </objects>
             <point key="canvasLocation" x="2018" y="956"/>
         </scene>
+        <!--Root Install Keyboard View Controller-->
+        <scene sceneID="Ilf-cW-rjn">
+            <objects>
+                <viewController id="AZd-Ge-Tuf" customClass="RootInstallKeyboardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7jM-Z1-qU6"/>
+                        <viewControllerLayoutGuide type="bottom" id="gqL-YA-6be"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pr2-aI-ydh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uh-hF-17i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2586" y="-637"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="cF0-dZ-H6E">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="pWf-yJ-61h" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QP3-mR-mHC"/>
+                        <viewControllerLayoutGuide type="bottom" id="gcC-DG-jtt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hc0-Ie-Zil">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0p-wJ-3cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2586" y="812"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="hJV-8A-Oej">
+            <objects>
+                <pageViewController restorationIdentifier="PageViewController" storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="GJO-5V-Xey" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igy-PP-7dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2586" y="69"/>
+        </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="Opn-N2-kgU">
             <objects>
