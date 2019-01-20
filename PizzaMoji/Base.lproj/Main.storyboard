@@ -194,8 +194,7 @@
                                     <color key="titleColor" red="0.7843137255" green="0.062745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onInstallKeyboardButtonPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="phj-5p-fDV"/>
-                                    <action selector="onInstallKeyboardPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="R0V-dH-uv3"/>
+                                    <action selector="onInstallKeyboardButtonPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="vIl-zK-79i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyP-8O-Wli">
@@ -236,7 +235,6 @@
                                     <color key="titleColor" red="0.7843137255" green="0.062745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onContactUs:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="pL8-oC-7hv"/>
                                     <action selector="onContactUsButtonPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="vVG-iL-I6S"/>
                                 </connections>
                             </button>
@@ -278,15 +276,18 @@
                             <constraint firstItem="hoF-Cx-PoV" firstAttribute="leading" secondItem="f2p-NO-Q58" secondAttribute="leading" constant="25" id="r6B-1S-TUV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="zcJ-Z0-UWC" kind="show" identifier="SettingsToTutorialSegue" id="C4b-An-iDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prN-8a-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886" y="149"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial View Controller-->
         <scene sceneID="Opn-N2-kgU">
             <objects>
-                <viewController id="zcJ-Z0-UWC" sceneMemberID="viewController">
+                <viewController id="zcJ-Z0-UWC" customClass="TutorialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bFl-N8-olR"/>
                         <viewControllerLayoutGuide type="bottom" id="kBK-Dq-a25"/>
@@ -294,12 +295,48 @@
                     <view key="view" contentMode="scaleToFill" id="y1J-kA-RJz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtF-XR-nSY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIH-Fg-drH" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="-65" width="375" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial" translatesAutoresizingMaskIntoConstraints="NO" id="rAt-lk-xkA">
+                                                <rect key="frame" x="0.0" y="65" width="375" height="935"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="rAt-lk-xkA" firstAttribute="top" secondItem="rIH-Fg-drH" secondAttribute="top" constant="65" id="1ZS-7n-SQ5"/>
+                                            <constraint firstItem="rAt-lk-xkA" firstAttribute="leading" secondItem="rIH-Fg-drH" secondAttribute="leading" id="EBr-3k-JNM"/>
+                                            <constraint firstAttribute="bottom" secondItem="rAt-lk-xkA" secondAttribute="bottom" id="Wep-ue-MpN"/>
+                                            <constraint firstAttribute="trailing" secondItem="rAt-lk-xkA" secondAttribute="trailing" id="iwU-HV-aHn"/>
+                                            <constraint firstAttribute="height" constant="1000" id="tm5-Yk-NlC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rIH-Fg-drH" secondAttribute="trailing" id="3ga-jN-ZlO"/>
+                                    <constraint firstItem="rIH-Fg-drH" firstAttribute="leading" secondItem="xtF-XR-nSY" secondAttribute="leading" id="BIq-IN-4N7"/>
+                                    <constraint firstItem="rIH-Fg-drH" firstAttribute="centerX" secondItem="xtF-XR-nSY" secondAttribute="centerX" id="QrS-Gw-klI"/>
+                                    <constraint firstAttribute="bottom" secondItem="rIH-Fg-drH" secondAttribute="bottom" id="cPL-1c-D94"/>
+                                    <constraint firstItem="rIH-Fg-drH" firstAttribute="top" secondItem="xtF-XR-nSY" secondAttribute="top" constant="-65" id="uSm-4m-Ewj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xtF-XR-nSY" firstAttribute="leading" secondItem="y1J-kA-RJz" secondAttribute="leading" id="0GE-M5-jqe"/>
+                            <constraint firstAttribute="trailing" secondItem="xtF-XR-nSY" secondAttribute="trailing" id="7zH-oD-mb3"/>
+                            <constraint firstItem="xtF-XR-nSY" firstAttribute="top" secondItem="bFl-N8-olR" secondAttribute="bottom" id="MkX-6T-ZPR"/>
+                            <constraint firstItem="kBK-Dq-a25" firstAttribute="top" secondItem="xtF-XR-nSY" secondAttribute="bottom" id="hR6-db-0gh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaR-vA-eCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="842"/>
+            <point key="canvasLocation" x="-287.19999999999999" y="915.29235382308855"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jcf-wa-bDO">
@@ -322,5 +359,6 @@
     </scenes>
     <resources>
         <image name="settings_nav" width="25" height="25"/>
+        <image name="tutorial" width="750" height="2216"/>
     </resources>
 </document>

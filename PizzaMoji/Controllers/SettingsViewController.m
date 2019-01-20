@@ -49,6 +49,7 @@
     [self performSegueWithIdentifier:@"SettingsToTutorialSegue" sender:self];
 }
 
+
 - (IBAction)onShareWithFriendsButtonPressed:(UIButton *)sender {
     [self shareContent];
 }
