@@ -279,6 +279,7 @@
                     <connections>
                         <segue destination="zcJ-Z0-UWC" kind="show" identifier="SettingsToTutorialSegue" id="C4b-An-iDr"/>
                         <segue destination="bEP-RZ-2rF" kind="show" identifier="WinFreePizzaSegue" id="imK-cV-BgB"/>
+                        <segue destination="jec-we-rwP" kind="show" identifier="PrivacyPolicySegue" id="UdN-zG-EPZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prN-8a-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -337,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaR-vA-eCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287.19999999999999" y="915.29235382308855"/>
+            <point key="canvasLocation" x="-228" y="956"/>
         </scene>
         <!--Win Free Pizza View Controller-->
         <scene sceneID="ne6-4T-Oqt">
@@ -399,7 +400,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBL-DF-Ifn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="504.80000000000001" y="970.16491754122944"/>
+            <point key="canvasLocation" x="505" y="956"/>
+        </scene>
+        <!--Privacy Policy View Controller-->
+        <scene sceneID="GPC-eO-QxZ">
+            <objects>
+                <viewController id="jec-we-rwP" customClass="PrivacyPolicyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dh7-dd-fFW"/>
+                        <viewControllerLayoutGuide type="bottom" id="8wq-bU-GSw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zw9-NN-O5Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-GO-iKv">
+                                <rect key="frame" x="41" y="74" width="293" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lGF-GO-iKv" firstAttribute="leading" secondItem="Zw9-NN-O5Y" secondAttribute="leadingMargin" constant="25" id="GiZ-VV-h9Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lGF-GO-iKv" secondAttribute="trailing" constant="25" id="HNd-0V-C6g"/>
+                            <constraint firstItem="8wq-bU-GSw" firstAttribute="top" secondItem="lGF-GO-iKv" secondAttribute="bottom" constant="20" id="QyZ-fr-ZCU"/>
+                            <constraint firstItem="lGF-GO-iKv" firstAttribute="top" secondItem="dh7-dd-fFW" secondAttribute="bottom" constant="10" id="yaR-sF-vPd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="privacyPolicyTextView" destination="lGF-GO-iKv" id="Vd1-wR-CTm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2M-Qd-m56" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="956"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jcf-wa-bDO">
