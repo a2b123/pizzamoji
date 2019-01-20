@@ -278,6 +278,7 @@
                     </view>
                     <connections>
                         <segue destination="zcJ-Z0-UWC" kind="show" identifier="SettingsToTutorialSegue" id="C4b-An-iDr"/>
+                        <segue destination="bEP-RZ-2rF" kind="show" identifier="WinFreePizzaSegue" id="imK-cV-BgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prN-8a-2Mx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -338,6 +339,68 @@
             </objects>
             <point key="canvasLocation" x="-287.19999999999999" y="915.29235382308855"/>
         </scene>
+        <!--Win Free Pizza View Controller-->
+        <scene sceneID="ne6-4T-Oqt">
+            <objects>
+                <viewController id="bEP-RZ-2rF" customClass="WinFreePizzaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jKW-XY-DoG"/>
+                        <viewControllerLayoutGuide type="bottom" id="wBn-1Y-ax3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e9W-dM-q73">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fantasypizza" translatesAutoresizingMaskIntoConstraints="NO" id="c4P-Jn-DLe">
+                                <rect key="frame" x="0.0" y="94" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Ody-w8-Xxt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fantasy Pizza is the best game to play while watching sports. It's super easy to play, and it's FREE!" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHA-Lb-bwX">
+                                <rect key="frame" x="25" y="359" width="325" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="HON-90-VUT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Dq-zB9">
+                                <rect key="frame" x="75" y="444" width="225" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="WKF-nK-GOU"/>
+                                    <constraint firstAttribute="height" constant="50" id="fG9-CQ-HeU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="GET THE APP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onGetAppButtonPressed:" destination="bEP-RZ-2rF" eventType="touchUpInside" id="1iq-Zp-qcU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZHA-Lb-bwX" secondAttribute="trailing" constant="9" id="Sbv-cj-2lP"/>
+                            <constraint firstItem="c4P-Jn-DLe" firstAttribute="leading" secondItem="e9W-dM-q73" secondAttribute="leadingMargin" constant="-16" id="VFo-r8-jc4"/>
+                            <constraint firstItem="c4P-Jn-DLe" firstAttribute="top" secondItem="jKW-XY-DoG" secondAttribute="bottom" constant="30" id="YjU-wg-aVg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c4P-Jn-DLe" secondAttribute="trailing" constant="-16" id="dpl-9d-RBI"/>
+                            <constraint firstItem="wo4-Dq-zB9" firstAttribute="centerX" secondItem="e9W-dM-q73" secondAttribute="centerX" id="flN-fI-PrC"/>
+                            <constraint firstItem="wo4-Dq-zB9" firstAttribute="top" secondItem="ZHA-Lb-bwX" secondAttribute="bottom" constant="25" id="gbe-AS-NE5"/>
+                            <constraint firstItem="ZHA-Lb-bwX" firstAttribute="leading" secondItem="e9W-dM-q73" secondAttribute="leadingMargin" constant="9" id="hjW-5r-5Ua"/>
+                            <constraint firstItem="ZHA-Lb-bwX" firstAttribute="top" secondItem="c4P-Jn-DLe" secondAttribute="bottom" constant="15" id="xY5-g3-T0z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getAppButton" destination="wo4-Dq-zB9" id="Ssa-3T-CT4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBL-DF-Ifn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="970.16491754122944"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jcf-wa-bDO">
             <objects>
@@ -358,6 +421,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fantasypizza" width="576" height="360"/>
         <image name="settings_nav" width="25" height="25"/>
         <image name="tutorial" width="750" height="2216"/>
     </resources>
