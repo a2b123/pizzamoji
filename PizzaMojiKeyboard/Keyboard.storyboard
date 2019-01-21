@@ -906,7 +906,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-fl-ELO" userLabel="123/#+= - Row 3">
                                 <rect key="frame" x="0.0" y="318.5" width="375" height="146.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-In-sMj" userLabel="#+=">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-In-sMj" userLabel="#+=">
                                         <rect key="frame" x="0.0" y="0.0" width="56.5" height="146.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="symbols">
@@ -1106,6 +1106,21 @@
                             <constraint firstItem="1km-Au-s72" firstAttribute="width" secondItem="iGm-eT-mSB" secondAttribute="width" id="ynD-sJ-lAZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="globeKey" destination="iqF-yb-Ako" id="yQ5-df-5Nb"/>
+                        <outlet property="letterButtonsArray" destination="DHu-tx-83m" id="HfZ-ep-6Xg"/>
+                        <outlet property="numbersRow1View" destination="uBL-mN-8z0" id="tJJ-xP-mLL"/>
+                        <outlet property="numbersRow2View" destination="zFb-Zp-XUE" id="CIx-ez-dUD"/>
+                        <outlet property="numbersSymbolsRow3View" destination="OoT-fl-ELO" id="WeE-2B-3Ax"/>
+                        <outlet property="oneTwoThreeButton" destination="Wt7-Gv-kC5" id="7Ni-qF-1GW"/>
+                        <outlet property="returnButton" destination="Agi-tu-Hcl" id="tmo-q2-ska"/>
+                        <outlet property="shiftButton" destination="K1v-fF-D7J" id="dbN-ze-Iq7"/>
+                        <outlet property="spaceButton" destination="di6-A1-seZ" id="m2l-TN-VrE"/>
+                        <outlet property="switchModeRow3Button" destination="dlI-In-sMj" id="NPc-LM-seE"/>
+                        <outlet property="switchModeRow4Button" destination="Wt7-Gv-kC5" id="bvQ-iA-Ckp"/>
+                        <outlet property="symbolsRow1View" destination="nSc-iF-J1b" id="Ccz-8l-qSu"/>
+                        <outlet property="symbolsRow2View" destination="QKr-w5-oX0" id="9ib-FV-QFw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLf-8q-vDI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

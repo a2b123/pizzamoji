@@ -298,7 +298,23 @@
                     <view key="view" contentMode="scaleToFill" id="PiL-HC-XP4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'd love to hear from you! Shoot us an email at info@boxscoregames.com." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd9-5w-psr">
+                                <rect key="frame" x="41" y="89" width="293" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rI1-2h-bXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dd9-5w-psr" secondAttribute="trailing" constant="25" id="g1v-lB-RKw"/>
+                            <constraint firstItem="dd9-5w-psr" firstAttribute="leading" secondItem="PiL-HC-XP4" secondAttribute="leadingMargin" constant="25" id="jhw-rp-gKc"/>
+                            <constraint firstItem="dd9-5w-psr" firstAttribute="top" secondItem="B1h-MJ-Ch9" secondAttribute="bottom" constant="25" id="vtw-Z3-YI9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJi-Ze-cR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
