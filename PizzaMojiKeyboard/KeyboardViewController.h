@@ -1,6 +1,6 @@
 //
 //  KeyboardViewController.h
-//  PizzaMoji
+//  PizzaMojiKeyboard
 //
 //  Created by Amar Bhatia on 1/20/19.
 //  Copyright © 2019 Amar-Bhatia. All rights reserved.

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876CCCE121F55AE60095AE42 /* PizzaMojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 876CCCD921F55AE60095AE42 /* PizzaMojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		876CCCE721F55D130095AE42 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCE621F55D130095AE42 /* KeyboardViewController.m */; };
 		878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7D621F3C42300D05174 /* AppDelegate.m */; };
 		878CC7DD21F3C42300D05174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DB21F3C42300D05174 /* Main.storyboard */; };
 		878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DE21F3C42500D05174 /* Assets.xcassets */; };
@@ -23,11 +25,38 @@
 		8799705621F45E59000833C9 /* ContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799705521F45E59000833C9 /* ContactUsViewController.m */; };
 		8799705A21F45EF9000833C9 /* RootInstallKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799705921F45EF9000833C9 /* RootInstallKeyboardViewController.m */; };
 		8799705D21F45F45000833C9 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799705C21F45F45000833C9 /* PageContentViewController.m */; };
-		8799706121F4657F000833C9 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8799706021F4657F000833C9 /* KeyboardViewController.m */; };
 		8799706321F46595000833C9 /* Keyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8799706221F46595000833C9 /* Keyboard.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		876CCCDF21F55AE60095AE42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 878CC7CA21F3C42300D05174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 876CCCD821F55AE60095AE42;
+			remoteInfo = PizzaMojiKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		876CCCD421F558E80095AE42 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				876CCCE121F55AE60095AE42 /* PizzaMojiKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		876CCCD921F55AE60095AE42 /* PizzaMojiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PizzaMojiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		876CCCDE21F55AE60095AE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876CCCE521F55D130095AE42 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		876CCCE621F55D130095AE42 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		878CC7D221F3C42300D05174 /* PizzaMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878CC7D521F3C42300D05174 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		878CC7D621F3C42300D05174 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,12 +86,17 @@
 		8799705921F45EF9000833C9 /* RootInstallKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootInstallKeyboardViewController.m; sourceTree = "<group>"; };
 		8799705B21F45F45000833C9 /* PageContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		8799705C21F45F45000833C9 /* PageContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
-		8799705F21F4657F000833C9 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
-		8799706021F4657F000833C9 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		8799706221F46595000833C9 /* Keyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Keyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		876CCCD621F55AE60095AE42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		878CC7CF21F3C42300D05174 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,11 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876CCCDA21F55AE60095AE42 /* PizzaMojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8799706221F46595000833C9 /* Keyboard.storyboard */,
+				876CCCE521F55D130095AE42 /* KeyboardViewController.h */,
+				876CCCE621F55D130095AE42 /* KeyboardViewController.m */,
+				876CCCDE21F55AE60095AE42 /* Info.plist */,
+			);
+			path = PizzaMojiKeyboard;
+			sourceTree = "<group>";
+		};
 		878CC7C921F3C42300D05174 = {
 			isa = PBXGroup;
 			children = (
-				8799705E21F462F3000833C9 /* PizzaMojiKeyboard */,
 				878CC7D421F3C42300D05174 /* PizzaMoji */,
+				876CCCDA21F55AE60095AE42 /* PizzaMojiKeyboard */,
 				878CC7D321F3C42300D05174 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				878CC7D221F3C42300D05174 /* PizzaMoji.app */,
+				876CCCD921F55AE60095AE42 /* PizzaMojiKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,19 +203,26 @@
 			path = "InstallKeyboardTutorial-Swipe";
 			sourceTree = "<group>";
 		};
-		8799705E21F462F3000833C9 /* PizzaMojiKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				8799705F21F4657F000833C9 /* KeyboardViewController.h */,
-				8799706021F4657F000833C9 /* KeyboardViewController.m */,
-				8799706221F46595000833C9 /* Keyboard.storyboard */,
-			);
-			path = PizzaMojiKeyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		876CCCD821F55AE60095AE42 /* PizzaMojiKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 876CCCE221F55AE60095AE42 /* Build configuration list for PBXNativeTarget "PizzaMojiKeyboard" */;
+			buildPhases = (
+				876CCCD521F55AE60095AE42 /* Sources */,
+				876CCCD621F55AE60095AE42 /* Frameworks */,
+				876CCCD721F55AE60095AE42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaMojiKeyboard;
+			productName = PizzaMojiKeyboard;
+			productReference = 876CCCD921F55AE60095AE42 /* PizzaMojiKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		878CC7D121F3C42300D05174 /* PizzaMoji */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 878CC7E821F3C42500D05174 /* Build configuration list for PBXNativeTarget "PizzaMoji" */;
@@ -177,10 +230,12 @@
 				878CC7CE21F3C42300D05174 /* Sources */,
 				878CC7CF21F3C42300D05174 /* Frameworks */,
 				878CC7D021F3C42300D05174 /* Resources */,
+				876CCCD421F558E80095AE42 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				876CCCE021F55AE60095AE42 /* PBXTargetDependency */,
 			);
 			name = PizzaMoji;
 			productName = PizzaMoji;
@@ -196,6 +251,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Amar-Bhatia";
 				TargetAttributes = {
+					876CCCD821F55AE60095AE42 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					878CC7D121F3C42300D05174 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -215,11 +273,19 @@
 			projectRoot = "";
 			targets = (
 				878CC7D121F3C42300D05174 /* PizzaMoji */,
+				876CCCD821F55AE60095AE42 /* PizzaMojiKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		876CCCD721F55AE60095AE42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		878CC7D021F3C42300D05174 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +301,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		876CCCD521F55AE60095AE42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876CCCE721F55D130095AE42 /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		878CC7CE21F3C42300D05174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,7 +316,6 @@
 				8799704D21F449EC000833C9 /* TutorialViewController.m in Sources */,
 				878CC7E521F3C42500D05174 /* main.m in Sources */,
 				878CC7ED21F3C48000D05174 /* RootViewController.m in Sources */,
-				8799706121F4657F000833C9 /* KeyboardViewController.m in Sources */,
 				8799703921F3E556000833C9 /* EmojiCollectionViewCell.m in Sources */,
 				8799705021F4540B000833C9 /* WinFreePizzaViewController.m in Sources */,
 				8799705D21F45F45000833C9 /* PageContentViewController.m in Sources */,
@@ -256,6 +329,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		876CCCE021F55AE60095AE42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 876CCCD821F55AE60095AE42 /* PizzaMojiKeyboard */;
+			targetProxy = 876CCCDF21F55AE60095AE42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		878CC7DB21F3C42300D05174 /* Main.storyboard */ = {
@@ -277,6 +358,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		876CCCE321F55AE60095AE42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465955C7HD;
+				INFOPLIST_FILE = PizzaMojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Amar-Bhatia.PizzaMoji.PizzaMojiKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		876CCCE421F55AE60095AE42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 465955C7HD;
+				INFOPLIST_FILE = PizzaMojiKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Amar-Bhatia.PizzaMoji.PizzaMojiKeyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		878CC7E621F3C42500D05174 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		876CCCE221F55AE60095AE42 /* Build configuration list for PBXNativeTarget "PizzaMojiKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				876CCCE321F55AE60095AE42 /* Debug */,
+				876CCCE421F55AE60095AE42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		878CC7CD21F3C42300D05174 /* Build configuration list for PBXProject "PizzaMoji" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
