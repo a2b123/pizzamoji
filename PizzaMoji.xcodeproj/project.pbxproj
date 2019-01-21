@@ -10,6 +10,7 @@
 		876CCCE121F55AE60095AE42 /* PizzaMojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 876CCCD921F55AE60095AE42 /* PizzaMojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		876CCCE721F55D130095AE42 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCE621F55D130095AE42 /* KeyboardViewController.m */; };
 		876CCCEA21F5A0BA0095AE42 /* KeyboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCE921F5A0BA0095AE42 /* KeyboardCollectionViewCell.m */; };
+		876CCCEC21F5A2850095AE42 /* KeyboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876CCCEB21F5A2850095AE42 /* KeyboardCollectionViewCell.xib */; };
 		878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7D621F3C42300D05174 /* AppDelegate.m */; };
 		878CC7DD21F3C42300D05174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DB21F3C42300D05174 /* Main.storyboard */; };
 		878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DE21F3C42500D05174 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		876CCCE621F55D130095AE42 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		876CCCE821F5A0BA0095AE42 /* KeyboardCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardCollectionViewCell.h; sourceTree = "<group>"; };
 		876CCCE921F5A0BA0095AE42 /* KeyboardCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardCollectionViewCell.m; sourceTree = "<group>"; };
+		876CCCEB21F5A2850095AE42 /* KeyboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardCollectionViewCell.xib; sourceTree = "<group>"; };
 		878CC7D221F3C42300D05174 /* PizzaMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878CC7D521F3C42300D05174 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		878CC7D621F3C42300D05174 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				8799703821F3E556000833C9 /* EmojiCollectionViewCell.m */,
 				876CCCE821F5A0BA0095AE42 /* KeyboardCollectionViewCell.h */,
 				876CCCE921F5A0BA0095AE42 /* KeyboardCollectionViewCell.m */,
+				876CCCEB21F5A2850095AE42 /* KeyboardCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8799704421F3FAC9000833C9 /* soupofjustice.ttf in Resources */,
+				876CCCEC21F5A2850095AE42 /* KeyboardCollectionViewCell.xib in Resources */,
 				878CC7E221F3C42500D05174 /* LaunchScreen.storyboard in Resources */,
 				8799706321F46595000833C9 /* Keyboard.storyboard in Resources */,
 				878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */,
