@@ -305,5 +305,141 @@
     
 }
 
+#pragma mark - key methods
+
+- (IBAction)globeKeyPressed:(UIButton *)sender {
+    //required functionality, switches to user's next keyboard
+    [self advanceToNextInputMode];
+
+}
+
+- (IBAction)backspaceKeyPressed:(UIButton *)sender {
+    [self.textDocumentProxy deleteBackward];
+
+}
+
+- (IBAction)returnKeyPressed:(UIButton *)sender {
+    [self.textDocumentProxy insertText:@"\n"];
+
+}
+
+- (IBAction)shiftKeyboard:(UIButton *)sender {
+    //if shift is on or in caps lock mode, turn it off. Otherwise, turn it on
+    _shiftStatus = _shiftStatus > 0 ? 0 : 1;
+    
+    [self shiftKeys];
+
+}
+
+- (IBAction)shiftKeyPressed:(UIButton *)sender {
+    //if shift is on or in caps lock mode, turn it off. Otherwise, turn it on
+    _shiftStatus = _shiftStatus > 0 ? 0 : 1;
+    
+    [self shiftKeys];
+
+}
+
+
+-(void) shiftKeyDoubleTapped: (UIButton*) sender {
+    
+    //set shift to caps lock and set all letters to uppercase
+    _shiftStatus = 2;
+    
+    [self shiftKeys];
+    
+}
+
+- (void) shiftKeys {
+    
+    //if shift is off, set letters to lowercase, otherwise set them to uppercase
+    if (_shiftStatus == 0) {
+        for (UIButton* letterButton in self.letterButtonsArray) {
+            [letterButton setTitle:letterButton.titleLabel.text.lowercaseString forState:UIControlStateNormal];
+        }
+    } else {
+        for (UIButton* letterButton in self.letterButtonsArray) {
+            [letterButton setTitle:letterButton.titleLabel.text.uppercaseString forState:UIControlStateNormal];
+        }
+    }
+    
+    //adjust the shift button images to match shift mode
+    NSString *shiftButtonImageName = [NSString stringWithFormat:@"shift_%i.png", _shiftStatus];
+    [self.shiftButton setImage:[UIImage imageNamed:shiftButtonImageName] forState:UIControlStateNormal];
+    
+    
+    NSString *shiftButtonHLImageName = [NSString stringWithFormat:@"shift_%iHL.png", _shiftStatus];
+    [self.shiftButton setImage:[UIImage imageNamed:shiftButtonHLImageName] forState:UIControlStateHighlighted];
+    
+}
+
+
+- (IBAction)spaceKeyPressed:(UIButton *)sender {
+    [self.textDocumentProxy insertText:@" "];
+}
+
+- (IBAction)switchKeyboardMode:(UIButton *)sender {
+    self.numbersRow1View.hidden = YES;
+    self.numbersRow2View.hidden = YES;
+    self.symbolsRow1View.hidden = YES;
+    self.symbolsRow2View.hidden = YES;
+    self.numbersSymbolsRow3View.hidden = YES;
+    
+    //switches keyboard to ABC, 123, or #+= mode
+    //case 1 = 123 mode, case 2 = #+= mode
+    //default case = ABC mode
+    
+    switch (sender.tag) {
+            
+        case 1: {
+            self.numbersRow1View.hidden = NO;
+            self.numbersRow2View.hidden = NO;
+            self.numbersSymbolsRow3View.hidden = NO;
+            
+            //change row 3 switch button image to #+= and row 4 switch button to ABC
+            [self.switchModeRow3Button setImage:[UIImage imageNamed:@"symbols.png"] forState:UIControlStateNormal];
+            [self.switchModeRow3Button setImage:[UIImage imageNamed:@"symbolsHL.png"] forState:UIControlStateHighlighted];
+            self.switchModeRow3Button.tag = 2;
+            [self.switchModeRow4Button setImage:[UIImage imageNamed:@"abc.png"] forState:UIControlStateNormal];
+            [self.switchModeRow4Button setImage:[UIImage imageNamed:@"abcHL.png"] forState:UIControlStateHighlighted];
+            self.switchModeRow4Button.tag = 0;
+        }
+            break;
+            
+        case 2: {
+            self.symbolsRow1View.hidden = NO;
+            self.symbolsRow2View.hidden = NO;
+            self.numbersSymbolsRow3View.hidden = NO;
+            
+            //change row 3 switch button image to 123
+            [self.switchModeRow3Button setImage:[UIImage imageNamed:@"numbers.png"] forState:UIControlStateNormal];
+            [self.switchModeRow3Button setImage:[UIImage imageNamed:@"numbersHL.png"] forState:UIControlStateHighlighted];
+            self.switchModeRow3Button.tag = 1;
+        }
+            break;
+            
+        default:
+            //change the row 4 switch button image to 123
+            [self.switchModeRow4Button setImage:[UIImage imageNamed:@"numbers.png"] forState:UIControlStateNormal];
+            [self.switchModeRow4Button setImage:[UIImage imageNamed:@"numbersHL.png"] forState:UIControlStateHighlighted];
+            self.switchModeRow4Button.tag = 1;
+            break;
+    }
+
+}
+
+- (IBAction)keyPressed:(UIButton *)sender {
+    //inserts the pressed character into the text document
+    [self.textDocumentProxy insertText:sender.titleLabel.text];
+    
+    //if shiftStatus is 1, reset it to 0 by pressing the shift key
+    if (_shiftStatus == 1) {
+        [self shiftKeyPressed:self.shiftButton];
+    }
+
+}
+
+
+
+
 
 @end
