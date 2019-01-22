@@ -10,7 +10,7 @@
 #import "CustomKeyboardViewController.h"
 #import "KeyboardCollectionViewCell.h"
 
-@interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIActionSheetDelegate>
 
 @property (nonatomic, strong) UIButton *nextKeyboardButton;
 @property (nonatomic, strong) UIButton *deleteButton;
@@ -18,6 +18,7 @@
 @property UICollectionView *collectionView;
 @property UICollectionView *letterKeyboardCollectionView;
 @property NSArray *imageNames;
+@property int shiftStatus; //0 = off, 1 = on, 2 = caps lock
 
 
 
@@ -187,6 +188,122 @@
     return NO;
 }
 
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
+    
+    self.collectionView.frame = collectionFrame;
+
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.imageNames.count;
+}
+
+-(KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    KeyboardCollectionViewCell *keyboardCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
+    if(keyboardCell.emojiImageView == nil) {
+        keyboardCell.emojiImageView = [[UIImageView alloc] initWithFrame:keyboardCell.contentView.frame];
+        keyboardCell.emojiImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [keyboardCell.contentView addSubview:keyboardCell.emojiImageView];
+    }
+    
+    keyboardCell.targetName = self.imageNames[indexPath.row];
+    keyboardCell.imageName = [NSString stringWithFormat:@"%@Keyboard", keyboardCell.targetName];
+    keyboardCell.emojiImageView.image = [UIImage imageNamed:keyboardCell.imageName];
+    
+    return keyboardCell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    NSLog(@"SELECTED");
+    
+    UIPasteboard *pb = [UIPasteboard generalPasteboard];
+    
+    //Uncomment following 3 lines to allow sharing at small size
+    //    NSString *targetName = self.imageNames[indexPath.row];
+    //    NSString *imageName = [NSString stringWithFormat:@"%@Keyboard", targetName];
+    //    pb.image = [UIImage imageNamed:imageName];
+    
+    //Comment out following line to disallow sharing full-size images
+    pb.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
+    pb.persistent = NO;
+    
+    UILabel *notify = [[UILabel alloc] initWithFrame:self.view.frame];
+    //    notify.hidden = YES;
+    notify.alpha = 0.0;
+    notify.backgroundColor = [UIColor blackColor];
+    
+    notify.text = @"Copied to Clipboard!";
+    notify.textColor = [UIColor whiteColor];
+    notify.textAlignment = NSTextAlignmentCenter;
+    
+    [self.view addSubview:notify];
+    [UIView animateWithDuration:0.3 animations:^{
+        notify.alpha = 0.75;
+    } completion:^(BOOL finished) {
+        
+        [UIView animateWithDuration:0.3 delay:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            notify.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [notify removeFromSuperview];
+        }];
+    }];
+}
+
+-(void)textWillChange:(id<UITextInput>)textInput {
+    // The app is about to change the document's contents. Perform any preparation here.
+}
+                       
+-(void)textDidChange:(id<UITextInput>)textInput {
+    // The app has just changed the document's contents, the document context has been updated.
+    
+    UIColor *textColor = nil;
+    if (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) {
+        textColor = [UIColor whiteColor];
+    } else {
+        textColor = [UIColor blackColor];
+    }
+    
+}
+
+#pragma mark -
+
+
+- (void)keyboardViewShouldAdvanceToNextInputMode:(id) sender {
+    [self advanceToNextInputMode];
+
+}
+
+- (void) initializeKeyboard {
+    
+    //start with shift on
+    _shiftStatus = 1;
+    
+    //initialize space key double tap
+    UITapGestureRecognizer *spaceDoubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(spaceKeyDoubleTapped:)];
+    
+    spaceDoubleTap.numberOfTapsRequired = 2;
+    [spaceDoubleTap setDelaysTouchesEnded:NO];
+    
+    [self.spaceButton addGestureRecognizer:spaceDoubleTap];
+    
+    //initialize shift key double and triple tap
+    UITapGestureRecognizer *shiftDoubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(shiftKeyDoubleTapped:)];
+    UITapGestureRecognizer *shiftTripleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(shiftKeyPressed:)];
+    
+    shiftDoubleTap.numberOfTapsRequired = 2;
+    shiftTripleTap.numberOfTapsRequired = 3;
+    
+    [shiftDoubleTap setDelaysTouchesEnded:NO];
+    [shiftTripleTap setDelaysTouchesEnded:NO];
+    
+    [self.shiftButton addGestureRecognizer:shiftDoubleTap];
+    [self.shiftButton addGestureRecognizer:shiftTripleTap];
+    
+}
 
 
 @end

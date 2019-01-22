@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KeyboardViewController : UIViewController
+@interface KeyboardViewController : UIInputViewController
 
 @end
 
