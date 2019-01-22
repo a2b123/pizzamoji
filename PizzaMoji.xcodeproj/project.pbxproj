@@ -11,6 +11,7 @@
 		876CCCE721F55D130095AE42 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCE621F55D130095AE42 /* KeyboardViewController.m */; };
 		876CCCEA21F5A0BA0095AE42 /* KeyboardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCE921F5A0BA0095AE42 /* KeyboardCollectionViewCell.m */; };
 		876CCCEC21F5A2850095AE42 /* KeyboardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 876CCCEB21F5A2850095AE42 /* KeyboardCollectionViewCell.xib */; };
+		876CCCEF21F5B0750095AE42 /* CustomKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 876CCCEE21F5B0750095AE42 /* CustomKeyboardViewController.m */; };
 		878CC7D721F3C42300D05174 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CC7D621F3C42300D05174 /* AppDelegate.m */; };
 		878CC7DD21F3C42300D05174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DB21F3C42300D05174 /* Main.storyboard */; };
 		878CC7DF21F3C42500D05174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 878CC7DE21F3C42500D05174 /* Assets.xcassets */; };
@@ -62,6 +63,8 @@
 		876CCCE821F5A0BA0095AE42 /* KeyboardCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardCollectionViewCell.h; sourceTree = "<group>"; };
 		876CCCE921F5A0BA0095AE42 /* KeyboardCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardCollectionViewCell.m; sourceTree = "<group>"; };
 		876CCCEB21F5A2850095AE42 /* KeyboardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardCollectionViewCell.xib; sourceTree = "<group>"; };
+		876CCCED21F5B0750095AE42 /* CustomKeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardViewController.h; sourceTree = "<group>"; };
+		876CCCEE21F5B0750095AE42 /* CustomKeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardViewController.m; sourceTree = "<group>"; };
 		878CC7D221F3C42300D05174 /* PizzaMoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878CC7D521F3C42300D05174 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		878CC7D621F3C42300D05174 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				8799706221F46595000833C9 /* Keyboard.storyboard */,
+				876CCCED21F5B0750095AE42 /* CustomKeyboardViewController.h */,
+				876CCCEE21F5B0750095AE42 /* CustomKeyboardViewController.m */,
 				876CCCE521F55D130095AE42 /* KeyboardViewController.h */,
 				876CCCE621F55D130095AE42 /* KeyboardViewController.m */,
 				876CCCDE21F55AE60095AE42 /* Info.plist */,
@@ -314,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876CCCEF21F5B0750095AE42 /* CustomKeyboardViewController.m in Sources */,
 				876CCCE721F55D130095AE42 /* KeyboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
