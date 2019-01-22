@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KeyboardCollectionViewCell.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 

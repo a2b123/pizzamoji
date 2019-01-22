@@ -75,6 +75,8 @@
 		878CC7E421F3C42500D05174 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		878CC7EB21F3C48000D05174 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		878CC7EC21F3C48000D05174 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		878F27EB21F6D69A00E7E4B9 /* PizzaMoji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PizzaMoji.entitlements; sourceTree = "<group>"; };
+		878F27EC21F6D6A300E7E4B9 /* PizzaMojiKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PizzaMojiKeyboard.entitlements; sourceTree = "<group>"; };
 		8799703221F3DE81000833C9 /* EmojiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiViewController.h; sourceTree = "<group>"; };
 		8799703321F3DE81000833C9 /* EmojiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmojiViewController.m; sourceTree = "<group>"; };
 		8799703721F3E556000833C9 /* EmojiCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiCollectionViewCell.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		876CCCDA21F55AE60095AE42 /* PizzaMojiKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				878F27EC21F6D6A300E7E4B9 /* PizzaMojiKeyboard.entitlements */,
 				8799706221F46595000833C9 /* Keyboard.storyboard */,
 				876CCCED21F5B0750095AE42 /* CustomKeyboardViewController.h */,
 				876CCCEE21F5B0750095AE42 /* CustomKeyboardViewController.m */,
@@ -149,6 +152,7 @@
 		878CC7D421F3C42300D05174 /* PizzaMoji */ = {
 			isa = PBXGroup;
 			children = (
+				878F27EB21F6D69A00E7E4B9 /* PizzaMoji.entitlements */,
 				878CC7D521F3C42300D05174 /* AppDelegate.h */,
 				878CC7D621F3C42300D05174 /* AppDelegate.m */,
 				878CC7DB21F3C42300D05174 /* Main.storyboard */,
@@ -266,9 +270,19 @@
 				TargetAttributes = {
 					876CCCD821F55AE60095AE42 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					878CC7D121F3C42300D05174 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -377,6 +391,7 @@
 		876CCCE321F55AE60095AE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PizzaMojiKeyboard/PizzaMojiKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 465955C7HD;
 				INFOPLIST_FILE = PizzaMojiKeyboard/Info.plist;
@@ -395,6 +410,7 @@
 		876CCCE421F55AE60095AE42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PizzaMojiKeyboard/PizzaMojiKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 465955C7HD;
 				INFOPLIST_FILE = PizzaMojiKeyboard/Info.plist;
@@ -526,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PizzaMoji/PizzaMoji.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 465955C7HD;
 				INFOPLIST_FILE = PizzaMoji/Info.plist;
@@ -543,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PizzaMoji/PizzaMoji.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 465955C7HD;
 				INFOPLIST_FILE = PizzaMoji/Info.plist;
