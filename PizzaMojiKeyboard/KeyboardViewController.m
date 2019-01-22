@@ -439,6 +439,37 @@
 }
 
 
+// Unused Keyboard Methods
+
+- (void)keyboardViewShouldDismiss
+{
+    [self dismissKeyboard];
+}
+
+- (void)keyboardViewDidInputDelete
+{
+    [self.textDocumentProxy deleteBackward];
+}
+
+- (void)keyboardViewDidInputReturn
+{
+    [self.textDocumentProxy insertText:@"\n"];
+}
+
+- (void)keyboardViewBackCursor
+{
+    [self.textDocumentProxy adjustTextPositionByCharacterOffset:-1];
+}
+
+- (void)keyboardViewForwardCursor
+{
+    [self.textDocumentProxy adjustTextPositionByCharacterOffset:1];
+}
+
+- (void)keyboardView:(KeyboardViewController *)keyboardViewController didAcceptCandidate:(NSString *)candidate
+{
+    [self.textDocumentProxy insertText:candidate];
+}
 
 
 
