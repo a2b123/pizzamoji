@@ -52,7 +52,7 @@
 
 -(void)shareContent{
     
-    NSString *message = @"#PizzaEmojiApp";
+    NSString *message = @"#PizzaMojiApp";
     //Uncomment the following line once we're ready to use slider
     //    UIImage *image = [self transformImageFromImageView];
     UIImage *image = self.emojiImageView.image;

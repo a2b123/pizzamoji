@@ -219,9 +219,9 @@
                                     <constraint firstAttribute="height" constant="50" id="4CS-ho-R0V"/>
                                     <constraint firstAttribute="width" constant="200" id="TQq-8c-J94"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Privacy Policy">
-                                    <color key="titleColor" red="0.7843137255" green="0.062745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onPrivacyPolicyButtonPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="sgs-9H-5v8"/>
@@ -233,9 +233,9 @@
                                     <constraint firstAttribute="height" constant="36" id="Wrb-lq-VeI"/>
                                     <constraint firstAttribute="width" constant="200" id="lmx-qL-2n6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Contact Us">
-                                    <color key="titleColor" red="0.7843137255" green="0.062745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="onContactUsButtonPressed:" destination="Xnk-tZ-AOC" eventType="touchUpInside" id="vVG-iL-I6S"/>

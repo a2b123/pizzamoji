@@ -156,6 +156,13 @@
     [super viewDidAppear:animated];
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+    [[UIPasteboard generalPasteboard] setImage:nil];
+    NSLog(@"MEMORY BREACH!");
+}
+
 -(void)onKeyboardHide:(NSNotification *)notification {
     NSLog(@"---> KEYBOARD HIDE NOTIFICATION");
 }
@@ -239,7 +246,7 @@
 }
 
 -(BOOL)isCustomKeyboardEnabled {
-    NSString *bundleID = @"Amar-Bhatia.PizzaMoji.PizzaMojiKeyboard";
+    NSString *bundleID = @"Amar-Bhatia.PizzaMoji";
     NSArray *keyboards = [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] objectForKey:@"Keyboard"];
     for (NSString *keyboard in keyboards) {
         if ([keyboard isEqualToString:bundleID])
@@ -282,9 +289,6 @@
     NSLog(@"SELECTED");
     
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
-//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-//    NSData *imgData = UIImagePNGRepresentation([UIImage imageNamed:self.imageNames[indexPath.row]]);
-//    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
 
     //Uncomment following 3 lines to allow sharing at small size
     //    NSString *targetName = self.imageNames[indexPath.row];
