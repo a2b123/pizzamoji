@@ -69,7 +69,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ld2-hR-A57">
-                        <barButtonItem key="leftBarButtonItem" id="D4l-d1-xp2"/>
                         <barButtonItem key="rightBarButtonItem" image="settings_nav" id="VaY-bs-4d0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>

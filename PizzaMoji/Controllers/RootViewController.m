@@ -77,17 +77,18 @@
               nil];
 
     
-    UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
-    CGRect pizzaFrame = CGRectMake(0, 0, 55, 35);
-    UIButton *pizzaButton = [[UIButton alloc] initWithFrame:pizzaFrame];
-    [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
-    [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
-          forControlEvents:UIControlEventTouchUpInside];
-    [pizzaButton setShowsTouchWhenHighlighted:YES];
+//    UIImage *freePizzaImage = [UIImage imageNamed:@"freepizzabutton"];
+//    CGRect pizzaFrame = CGRectMake(0, 0, 55, 35);
+//    UIButton *pizzaButton = [[UIButton alloc] initWithFrame:pizzaFrame];
+//    [pizzaButton setBackgroundImage:freePizzaImage forState:UIControlStateNormal];
+//    [pizzaButton addTarget:self action:@selector(segueToPizzaPage)
+//          forControlEvents:UIControlEventTouchUpInside];
+//    pizzaButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//    [pizzaButton setShowsTouchWhenHighlighted:YES];
+
     
-    
-    UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
-    self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
+//    UIBarButtonItem *pizzaBarButtonItem =[[UIBarButtonItem alloc] initWithCustomView:pizzaButton];
+//    self.navigationItem.leftBarButtonItem = pizzaBarButtonItem;
     
 }
 
@@ -97,7 +98,7 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"tablecloth"]]];
     
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:18] };
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"soupofjustice" size:25] };
     
 }
 
