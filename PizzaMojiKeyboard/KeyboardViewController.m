@@ -9,6 +9,8 @@
 #import "KeyboardViewController.h"
 #import "CustomKeyboardViewController.h"
 #import "KeyboardCollectionViewCell.h"
+#import <MobileCoreServices/UTCoreTypes.h>
+
 
 @interface KeyboardViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIActionSheetDelegate>
 
@@ -104,7 +106,6 @@
     
     [self setupGlobalButton];
     [self setupDeleteButton];
-
     
     // Perform custom UI setup here
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
@@ -160,7 +161,7 @@
 }
 
 -(void)setupGlobalButton {
-    UIImage *globalImage = [UIImage imageNamed:@"globalbutton"];
+    UIImage *globalImage = [UIImage imageNamed:@"globebutton"];
     CGRect globalFrame = CGRectMake(0, 0, 88, 44);
     
     self.nextKeyboardButton = [[UIButton alloc] initWithFrame:globalFrame];
@@ -195,6 +196,27 @@
     [self.deleteButton.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 }
 
+-(void)setupNumbersButton {
+    UIImage *numbersImage  = [UIImage imageNamed:@"numbers"];
+    CGRect numbersFrame = CGRectMake(0, 0, 88, 44);
+    
+    self.switchModeRow3Button = [[UIButton alloc] initWithFrame:numbersFrame];
+    [self.switchModeRow3Button setBackgroundImage:numbersImage forState:UIControlStateNormal];
+    
+    [self.switchModeRow3Button sizeToFit];
+    self.switchModeRow3Button.translatesAutoresizingMaskIntoConstraints = false;
+    
+    [self.switchModeRow3Button addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:self.switchModeRow3Button];
+    
+    [self.switchModeRow3Button.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+    [self.switchModeRow3Button.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    [self.switchModeRow3Button.leftAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+    [self.switchModeRow3Button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+}
+
+
 #pragma Change Keyboard
 
 // Change Next Keyboard
@@ -202,6 +224,7 @@
 -(void)addGestureToKeyboard {
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
 }
+
 
 -(BOOL)isOpenAccessGranted {
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
@@ -259,7 +282,10 @@
     NSLog(@"SELECTED");
     
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    
+//    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+//    NSData *imgData = UIImagePNGRepresentation([UIImage imageNamed:self.imageNames[indexPath.row]]);
+//    [pasteboard setData:imgData forPasteboardType:[UIPasteboardTypeListImage objectAtIndex:0]];
+
     //Uncomment following 3 lines to allow sharing at small size
     //    NSString *targetName = self.imageNames[indexPath.row];
     //    NSString *imageName = [NSString stringWithFormat:@"%@Keyboard", targetName];
@@ -268,6 +294,7 @@
     //Comment out following line to disallow sharing full-size images
     pb.image = [UIImage imageNamed:self.imageNames[indexPath.row]];
     pb.persistent = NO;
+
     
     UILabel *notify = [[UILabel alloc] initWithFrame:self.view.frame];
     //    notify.hidden = YES;
@@ -361,13 +388,6 @@
 
 }
 
-- (IBAction)shiftKeyboard:(UIButton *)sender {
-    //if shift is on or in caps lock mode, turn it off. Otherwise, turn it on
-    _shiftStatus = _shiftStatus > 0 ? 0 : 1;
-    
-    [self shiftKeys];
-
-}
 
 - (IBAction)shiftKeyPressed:(UIButton *)sender {
     //if shift is on or in caps lock mode, turn it off. Otherwise, turn it on

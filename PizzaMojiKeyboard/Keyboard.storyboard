@@ -192,7 +192,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-iF-nC5" userLabel="Letters - Row 2">
                                 <rect key="frame" x="0.0" y="191.5" width="375" height="147"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCK-XP-4Eu" userLabel="A">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCK-XP-4Eu" userLabel="A">
                                         <rect key="frame" x="19" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="A">
@@ -203,7 +203,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="qCI-cQ-zEq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxp-Tn-yOj" userLabel="S">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxp-Tn-yOj" userLabel="S">
                                         <rect key="frame" x="56.5" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="S">
@@ -214,7 +214,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="vhd-EA-C8W"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-tr-d2Y" userLabel="D">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-tr-d2Y" userLabel="D">
                                         <rect key="frame" x="94" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="D">
@@ -225,7 +225,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="vJZ-b7-1HG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-yX-NSN" userLabel="F">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-yX-NSN" userLabel="F">
                                         <rect key="frame" x="131.5" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="F">
@@ -236,7 +236,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="vF3-jN-2wv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-ff-4aR" userLabel="G">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-ff-4aR" userLabel="G">
                                         <rect key="frame" x="169" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="G">
@@ -247,7 +247,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="aug-yO-aTr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-yj-Ys5" userLabel="H">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-yj-Ys5" userLabel="H">
                                         <rect key="frame" x="206.5" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="H">
@@ -258,7 +258,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="CwV-WV-5Xh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlk-Vz-q9W" userLabel="J">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlk-Vz-q9W" userLabel="J">
                                         <rect key="frame" x="244" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="J">
@@ -269,7 +269,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="bQ4-3K-593"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fow-Yc-KAJ" userLabel="K">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fow-Yc-KAJ" userLabel="K">
                                         <rect key="frame" x="281.5" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="K">
@@ -280,7 +280,7 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="1ae-Jf-caV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-aU-UWv" userLabel="L">
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vI-aU-UWv" userLabel="L">
                                         <rect key="frame" x="319" y="0.0" width="37.5" height="147"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="L">
@@ -344,7 +344,6 @@
                                         </state>
                                         <connections>
                                             <action selector="shiftKeyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="1Ug-K1-ykd"/>
-                                            <action selector="shiftKeyboard:" destination="eAM-8d-8g6" eventType="touchUpInside" id="f2S-XZ-5zw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISe-O0-m8y" userLabel="Z">
@@ -634,7 +633,7 @@
                                     <constraint firstItem="JM0-Fy-yA1" firstAttribute="width" secondItem="XKV-aB-rKO" secondAttribute="width" id="zfn-1h-Thx"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zFb-Zp-XUE" userLabel="123 - Row 2">
+                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zFb-Zp-XUE" userLabel="123 - Row 2">
                                 <rect key="frame" x="0.0" y="157" width="375" height="146.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1I4-sO-uTe" userLabel="-">
@@ -693,7 +692,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPy-Oc-KEy" userLabel=")">
-                                        <rect key="frame" x="187.5" y="47" width="30" height="36"/>
+                                        <rect key="frame" x="187.5" y="0.0" width="37.5" height="146.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title=")">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1111,7 +1110,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-fl-ELO" userLabel="123/#+= - Row 3">
                                 <rect key="frame" x="0.0" y="338.5" width="375" height="146.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-In-sMj" userLabel="#+=">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-In-sMj" userLabel="#+=">
                                         <rect key="frame" x="0.0" y="0.0" width="56.5" height="146.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" image="symbols">
@@ -1166,11 +1165,11 @@
                                             <action selector="keyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="gOJ-qh-M5L"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-1Z-EeZ" userLabel="backspace">
-                                        <rect key="frame" x="319" y="0.0" width="375" height="146.5"/>
+                                    <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-1Z-EeZ" userLabel="backspace">
+                                        <rect key="frame" x="319" y="0.0" width="56" height="146.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <state key="normal" image="backspace">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -1224,7 +1223,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qe-UO-6BC" userLabel="Row 4">
                                 <rect key="frame" x="0.0" y="485" width="375" height="182"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-Gv-kC5" userLabel="123">
+                                    <button tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-Gv-kC5" userLabel="123">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="179"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1247,7 +1246,7 @@
                                             <action selector="globeKeyPressed:" destination="eAM-8d-8g6" eventType="touchUpInside" id="4cE-Wq-dpe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di6-A1-seZ" userLabel="Space Button">
+                                    <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di6-A1-seZ" userLabel="Space Button">
                                         <rect key="frame" x="189" y="0.0" width="222" height="179"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="space">
@@ -1272,7 +1271,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="di6-A1-seZ" firstAttribute="width" secondItem="1Qe-UO-6BC" secondAttribute="width" multiplier="0.37" id="2WB-EG-Eff"/>
+                                    <constraint firstItem="di6-A1-seZ" firstAttribute="width" secondItem="1Qe-UO-6BC" secondAttribute="width" multiplier="0.15" id="2WB-EG-Eff"/>
                                     <constraint firstItem="Wt7-Gv-kC5" firstAttribute="width" secondItem="1Qe-UO-6BC" secondAttribute="width" id="9M4-lm-MEH"/>
                                     <constraint firstItem="di6-A1-seZ" firstAttribute="height" secondItem="1Qe-UO-6BC" secondAttribute="height" id="9kc-uu-h6L"/>
                                     <constraint firstItem="Agi-tu-Hcl" firstAttribute="height" secondItem="1Qe-UO-6BC" secondAttribute="height" id="GFJ-TK-kc9"/>

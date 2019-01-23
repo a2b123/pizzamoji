@@ -117,6 +117,9 @@
                                 <state key="normal" title="SHARE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onShareButtonPressed:" destination="rI9-dO-roK" eventType="touchUpInside" id="6rR-WG-aRz"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NVm-cI-WvL">
                                 <rect key="frame" x="87.5" y="89" width="200" height="200"/>
