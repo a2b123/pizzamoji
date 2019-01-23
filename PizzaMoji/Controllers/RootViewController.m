@@ -12,8 +12,7 @@
 #import "SettingsViewController.h"
 
 
-@interface RootViewController ()
-{
+@interface RootViewController () {
     CGFloat cellHeight;
     NSMutableArray *emojis;
     UIImage *selectedEmoji;
@@ -140,9 +139,9 @@
 
 -(void)segueToPizzaPage {
     
-//    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
-//    [self.navigationController pushViewController:freePizzaVC animated:YES];
+    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *freePizzaVC = [mystoryboard instantiateViewControllerWithIdentifier:@"FreePizzaView"];
+    [self.navigationController pushViewController:freePizzaVC animated:YES];
 }
 
 

@@ -2,7 +2,7 @@
 //  KeyboardCollectionViewCell.h
 //  PizzaMoji
 //
-//  Created by Amar Bhatia on 1/21/19.
+//  Created by Amar Bhatia on 1/22/19.
 //  Copyright © 2019 Amar-Bhatia. All rights reserved.
 //
 
@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property UIImageView *emojiImageView;
 @property NSString *imageName;
 @property NSString *targetName;
+
 
 @end
 

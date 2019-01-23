@@ -102,6 +102,9 @@
                        @"toppingtomato",
                        nil];
     
+    [self setupGlobalButton];
+    [self setupDeleteButton];
+
     
     // Perform custom UI setup here
     [self.keyboard.globeKey addTarget:self action:@selector(advanceToNextInputMode) forControlEvents:UIControlEventTouchUpInside];
@@ -111,6 +114,41 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    if ([self isOpenAccessGranted] == false) {  //  if user doesn't allow access, show our custom keyboard
+        
+        // Hide Other Keyboard Buttons
+        self.nextKeyboardButton.hidden = YES;
+        self.deleteButton.hidden = YES;
+        
+        [self initializeKeyboard];
+        
+    } else {
+        
+        // if the User allows access, show collectionview keyboard
+        
+        // Hide Other Keyboard Buttons
+        self.shiftButton.hidden = YES;
+        self.spaceButton.hidden = YES;
+        self.globeKey.hidden = YES;
+        self.returnButton.hidden = YES;
+        self.oneTwoThreeButton.hidden = YES;
+        
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
+        layout.itemSize = CGSizeMake(60, 60);
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
+        CGRect collectionFrame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - 44);
+        self.collectionView = [[UICollectionView alloc] initWithFrame:collectionFrame collectionViewLayout:layout];
+        self.collectionView.showsHorizontalScrollIndicator = NO;
+        self.collectionView.showsVerticalScrollIndicator = NO;
+        self.collectionView.backgroundColor = [UIColor whiteColor];
+        self.collectionView.delegate = self;
+        self.collectionView.dataSource = self;
+        [self.collectionView registerClass:[KeyboardCollectionViewCell class] forCellWithReuseIdentifier:@"CellID"];
+        [self.view addSubview:self.collectionView];
+    }
+
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -178,7 +216,7 @@
 }
 
 -(BOOL)isCustomKeyboardEnabled {
-    NSString *bundleID = @"AmarBhatia.PizzaMoji";
+    NSString *bundleID = @"Amar-Bhatia.PizzaMoji.PizzaMojiKeyboard";
     NSArray *keyboards = [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] objectForKey:@"Keyboard"];
     for (NSString *keyboard in keyboards) {
         if ([keyboard isEqualToString:bundleID])
@@ -201,8 +239,8 @@
     return self.imageNames.count;
 }
 
--(KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
+- (KeyboardCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+
     KeyboardCollectionViewCell *keyboardCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CellID" forIndexPath:indexPath];
     if(keyboardCell.emojiImageView == nil) {
         keyboardCell.emojiImageView = [[UIImageView alloc] initWithFrame:keyboardCell.contentView.frame];
@@ -217,7 +255,7 @@
     return keyboardCell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"SELECTED");
     
     UIPasteboard *pb = [UIPasteboard generalPasteboard];

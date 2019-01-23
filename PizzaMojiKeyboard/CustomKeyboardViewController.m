@@ -2,11 +2,12 @@
 //  CustomKeyboardViewController.m
 //  PizzaMojiKeyboard
 //
-//  Created by Amar Bhatia on 1/21/19.
+//  Created by Amar Bhatia on 1/22/19.
 //  Copyright © 2019 Amar-Bhatia. All rights reserved.
 //
 
 #import "CustomKeyboardViewController.h"
+#import "KeyboardCollectionViewCell.h"
 
 @interface CustomKeyboardViewController ()
 
@@ -20,8 +21,9 @@
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"KeyboardCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CELL"];
     self.emojiIcons = [NSArray arrayWithObjects:@"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", @"skull", nil];
-    
+
 }
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 30;
@@ -38,9 +40,6 @@
     NSArray *views = [cell.contentView subviews];
     UIImage *imageTitle = [views objectAtIndex:0];
 }
-
-
-
 
 
 @end

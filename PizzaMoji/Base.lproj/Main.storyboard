@@ -73,7 +73,7 @@
                         <barButtonItem key="rightBarButtonItem" image="settings_nav" id="VaY-bs-4d0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="Xnk-tZ-AOC" kind="show" id="CRn-Nz-62c"/>
+                                <segue destination="Xnk-tZ-AOC" kind="show" identifier="" id="CRn-Nz-62c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -422,7 +422,7 @@
         <!--Win Free Pizza View Controller-->
         <scene sceneID="ne6-4T-Oqt">
             <objects>
-                <viewController id="bEP-RZ-2rF" customClass="WinFreePizzaViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FreePizzaView" id="bEP-RZ-2rF" customClass="WinFreePizzaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jKW-XY-DoG"/>
                         <viewControllerLayoutGuide type="bottom" id="wBn-1Y-ax3"/>
